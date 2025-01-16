@@ -2,9 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Pizza Levering</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<header>
+    <h1>Drone Pizza Levering</h1>
+    <nav>
+        <a href="index.html">Leveringer</a>
+        <a href="drones.html">Droner</a>
+        <a href="stations.html">Stationer</a>
+        <a href="pizzas.html">Pizzaer</a>
+    </nav>
+</header>
 
+<main>
+    <!-- Leveringer -->
+    <section>
+        <h2>Leveringer</h2>
+        <table id="deliveryTable">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Adresse</th>
+                <th>Pizza</th>
+                <th>Antal</th>
+                <th>Status</th>
+                <th>Drone</th>
+                <th>Handling</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Dynamiske rækker tilføjes her -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Simulation -->
+    <section>
+        <h2>Simulering</h2>
+        <div>
+            <h3>Simuler Oprettelse</h3>
+            <label for="simulatePizza">Vælg Pizza:</label>
+            <select id="simulatePizza"></select>
+
+            <label for="simulateAddress">Adresse:</label>
+            <input type="text" id="simulateAddress" placeholder="Indtast adresse" />
+
+            <label for="simulateAntal">Antal:</label>
+            <input type="number" id="simulateAntal" value="1" min="1" />
+
+            <button id="simulateCreateBtn">Simuler Oprettelse</button>
+        </div>
+
+        <div>
+            <h3>Simuler Afslutning</h3>
+            <label for="simulateLeveringId">Levering ID:</label>
+            <input type="number" id="simulateLeveringId" min="1" />
+
+            <button id="simulateFinishBtn">Simuler Afslutning</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Drone Pizza © 2025</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/deliveries.js"></script>
+<script src="js/simulations.js"></script>
 </body>
 </html>
